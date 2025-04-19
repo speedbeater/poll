@@ -22,17 +22,12 @@
 </head>
 <body>
     <h1>Political Views Questionnaire</h1>
-    <form id="questionnaire" action="https://formspree.io/f/xpwpvwno" method="POST">
-        <!-- Hidden fields for Formspree -->
-        <input type="text" name="_gotcha" style="display:none" />
-        <input type="hidden" name="_next" value="https://speedbeater.github.io/poll/thanks.html" />
-
+    <form id="questionnaire">
         <!-- Section 1: Core Political Identity and Values -->
         <h2>Section 1: Core Political Identity and Values</h2>
 
         <div class="question">
             <h3>1. What is your view on the role of government in people’s lives?</h3>
-            <input type="hidden" name="q1_full" id="q1_full">
             <label><input type="radio" name="q1" value="a"> The government should stay out of most aspects of people’s lives.</label>
             <label><input type="radio" name="q1" value="b"> Government should protect rights and ensure fairness, but not interfere heavily.</label>
             <label><input type="radio" name="q1" value="c"> Government should actively address inequality and provide essential services.</label>
@@ -42,7 +37,6 @@
 
         <div class="question">
             <h3>2. What is your view on the role of government in economic affairs?</h3>
-            <input type="hidden" name="q2_full" id="q2_full">
             <label><input type="radio" name="q2" value="a"> Government should minimize interference, letting markets drive economic outcomes.</label>
             <label><input type="radio" name="q2" value="b"> Government should regulate markets to ensure fairness and prevent monopolies.</label>
             <label><input type="radio" name="q2" value="c"> Government should actively redistribute wealth to reduce inequality.</label>
@@ -52,7 +46,6 @@
 
         <div class="question">
             <h3>3. Do you believe political labels are still useful?</h3>
-            <input type="hidden" name="q3_full" id="q3_full">
             <label><input type="radio" name="q3" value="a"> Yes—they help clarify complex positions.</label>
             <label><input type="radio" name="q3" value="b"> Somewhat—they’re useful shorthand, but often misleading.</label>
             <label><input type="radio" name="q3" value="c"> No—they oversimplify and polarize.</label>
@@ -61,7 +54,6 @@
 
         <div class="question">
             <h3>4. Do you identify primarily as:</h3>
-            <input type="hidden" name="q4_full" id="q4_full">
             <label><input type="radio" name="q4" value="a"> An American citizen first.</label>
             <label><input type="radio" name="q4" value="b"> A global citizen.</label>
             <label><input type="radio" name="q4" value="c"> A child of multiple cultures.</label>
@@ -71,7 +63,6 @@
 
         <div class="question">
             <h3>5. What personal experience most shaped your political views?</h3>
-            <input type="hidden" name="q5_full" id="q5_full">
             <label><input type="radio" name="q5" value="a"> A specific historical or global event (e.g., a war, economic crisis).</label>
             <label><input type="radio" name="q5" value="b"> A personal encounter with injustice or inequality.</label>
             <label><input type="radio" name="q5" value="c"> Education or exposure to philosophical/political ideas.</label>
@@ -81,7 +72,6 @@
 
         <div class="question">
             <h3>6. Which virtues do you value most in political leadership? (Choose up to 3)</h3>
-            <input type="hidden" name="q6_full" id="q6_full">
             <div class="checkbox-group" data-max="3">
                 <label><input type="checkbox" name="q6[]" value="a"> Integrity</label>
                 <label><input type="checkbox" name="q6[]" value="b"> Courage</label>
@@ -96,7 +86,6 @@
 
         <div class="question">
             <h3>7. Which philosophical outlook most aligns with your views?</h3>
-            <input type="hidden" name="q7_full" id="q7_full">
             <label><input type="radio" name="q7" value="a"> Liberal humanism</label>
             <label><input type="radio" name="q7" value="b"> Classical liberalism</label>
             <label><input type="radio" name="q7" value="c"> Pragmatism</label>
@@ -108,7 +97,6 @@
 
         <div class="question">
             <h3>8. Which issue do you believe is the most urgent today?</h3>
-            <input type="hidden" name="q8_full" id="q8_full">
             <label><input type="radio" name="q8" value="a"> Threats to democracy</label>
             <label><input type="radio" name="q8" value="b"> Climate change</label>
             <label><input type="radio" name="q8" value="c"> Economic inequality</label>
@@ -123,7 +111,6 @@
 
         <div class="question">
             <h3>9. What is essential to a functioning democracy? (Choose up to 3)</h3>
-            <input type="hidden" name="q9_full" id="q9_full">
             <div class="checkbox-group" data-max="3">
                 <label><input type="checkbox" name="q9[]" value="a"> Free and fair elections</label>
                 <label><input type="checkbox" name="q9[]" value="b"> Independent judiciary</label>
@@ -137,7 +124,6 @@
 
         <div class="question">
             <h3>10. Is democracy always the best system of government?</h3>
-            <input type="hidden" name="q10_full" id="q10_full">
             <label><input type="radio" name="q10" value="a"> Yes, universally and always</label>
             <label><input type="radio" name="q10" value="b"> Yes, but it must be culturally adapted</label>
             <label><input type="radio" name="q10" value="c"> Not always—some societies may need different systems</label>
@@ -146,7 +132,6 @@
 
         <div class="question">
             <h3>11. What is the greatest threat to democracy, and how should it be addressed?</h3>
-            <input type="hidden" name="q11_full" id="q11_full">
             <label><input type="radio" name="q11" value="a"> Right-wing populism—through education and civic engagement</label>
             <label><input type="radio" name="q11" value="b"> Far-left radicalism—through dialogue and moderation</label>
             <label><input type="radio" name="q11" value="c"> Disinformation—through transparency and media literacy</label>
@@ -156,7 +141,6 @@
 
         <div class="question">
             <h3>12. Should governments or institutions intervene to defend democracy globally, and how?</h3>
-            <input type="hidden" name="q12_full" id="q12_full">
             <label><input type="radio" name="q12" value="a"> Yes, through active military and economic intervention</label>
             <label><input type="radio" name="q12" value="b"> Yes, through diplomacy and sanctions only</label>
             <label><input type="radio" name="q12" value="c"> Only multilaterally, with allies or institutions</label>
@@ -165,7 +149,6 @@
 
         <div class="question">
             <h3>13. Is it ever justifiable to restrict democratic freedoms for national security?</h3>
-            <input type="hidden" name="q13_full" id="q13_full">
             <label><input type="radio" name="q13" value="a"> Yes, in extreme cases (e.g., war or terrorism)</label>
             <label><input type="radio" name="q13" value="b"> Only with strict oversight and time limits</label>
             <label><input type="radio" name="q13" value="c"> Rarely, and it must be narrowly tailored</label>
@@ -174,7 +157,6 @@
 
         <div class="question">
             <h3>14. Can authoritarian regimes ever provide effective governance?</h3>
-            <input type="hidden" name="q14_full" id="q14_full">
             <label><input type="radio" name="q14" value="a"> No—their success is unsustainable or unethical</label>
             <label><input type="radio" name="q14" value="b"> Yes, if they deliver prosperity and order</label>
             <label><input type="radio" name="q14" value="c"> In some contexts, authoritarianism is necessary</label>
@@ -183,7 +165,6 @@
 
         <div class="question">
             <h3>15. What electoral reform would you most support to strengthen democracy?</h3>
-            <input type="hidden" name="q15_full" id="q15_full">
             <label><input type="radio" name="q15" value="a"> Proportional representation to increase party diversity</label>
             <label><input type="radio" name="q15" value="b"> Ranked-choice voting to reduce polarization</label>
             <label><input type="radio" name="q15" value="c"> Eliminating gerrymandering through independent redistricting</label>
@@ -193,7 +174,6 @@
 
         <div class="question">
             <h3>16. What do you think about the current state of democracy around the world?</h3>
-            <input type="hidden" name="q16_full" id="q16_full">
             <label><input type="radio" name="q16" value="a"> Democracy is flourishing, but it needs protection and reform</label>
             <label><input type="radio" name="q16" value="b"> Democracy is in decline, and authoritarianism is on the rise</label>
             <label><input type="radio" name="q16" value="c"> Democracy is fragile but adaptable to modern challenges</label>
@@ -205,7 +185,6 @@
 
         <div class="question">
             <h3>17. What is the primary role of journalism in society?</h3>
-            <input type="hidden" name="q17_full" id="q17_full">
             <label><input type="radio" name="q17" value="a"> To inform the public and hold power accountable</label>
             <label><input type="radio" name="q17" value="b"> To reflect diverse perspectives and foster understanding</label>
             <label><input type="radio" name="q17" value="c"> To expose corruption and amplify the voiceless</label>
@@ -215,7 +194,6 @@
 
         <div class="question">
             <h3>18. Should freedom of speech include the right to offend, and to what extent?</h3>
-            <input type="hidden" name="q18_full" id="q18_full">
             <label><input type="radio" name="q18" value="a"> It should be absolute—even offensive speech must be protected</label>
             <label><input type="radio" name="q18" value="b"> Yes, but with limits on hate speech or incitement</label>
             <label><input type="radio" name="q18" value="c"> No—speech that causes harm should be restricted</label>
@@ -224,7 +202,6 @@
 
         <div class="question">
             <h3>19. How should journalists handle misinformation or disinformation?</h3>
-            <input type="hidden" name="q19_full" id="q19_full">
             <label><input type="radio" name="q19" value="a"> Proactively debunk and expose sources</label>
             <label><input type="radio" name="q19" value="b"> Focus on building trust with truthful reporting</label>
             <label><input type="radio" name="q19" value="c"> Avoid amplifying falsehoods—even to correct them</label>
@@ -233,7 +210,6 @@
 
         <div class="question">
             <h3>20. What is your view on anonymous sources in journalism?</h3>
-            <input type="hidden" name="q20_full" id="q20_full">
             <label><input type="radio" name="q20" value="a"> Essential for investigative reporting</label>
             <label><input type="radio" name="q20" value="b"> Acceptable, but should be used sparingly</label>
             <label><input type="radio" name="q20" value="c"> Problematic—transparency is more important</label>
@@ -242,7 +218,6 @@
 
         <div class="question">
             <h3>21. Do you believe governments should regulate social media platforms?</h3>
-            <input type="hidden" name="q21_full" id="q21_full">
             <label><input type="radio" name="q21" value="a"> Yes—strong regulation is needed to protect democracy</label>
             <label><input type="radio" name="q21" value="b"> Yes, but only to prevent harm (e.g., violence, child exploitation)</label>
             <label><input type="radio" name="q21" value="c"> No—platforms should self-regulate</label>
@@ -251,7 +226,6 @@
 
         <div class="question">
             <h3>22. How would you handle a colleague’s offensive speech in a professional setting?</h3>
-            <input type="hidden" name="q22_full" id="q22_full">
             <label><input type="radio" name="q22" value="a"> Defend their right to speak, regardless of offense</label>
             <label><input type="radio" name="q22" value="b"> Engage in dialogue to challenge their views respectfully</label>
             <label><input type="radio" name="q22" value="c"> Report or address it through institutional channels</label>
@@ -261,7 +235,6 @@
 
         <div class="question">
             <h3>23. Do you believe the line between journalism and activism is blurring?</h3>
-            <input type="hidden" name="q23_full" id="q23_full">
             <label><input type="radio" name="q23" value="a"> Yes—it’s a growing problem</label>
             <label><input type="radio" name="q23" value="b"> Yes—but some advocacy is legitimate in journalism</label>
             <label><input type="radio" name="q23" value="c"> No—most journalists still uphold traditional ethics</label>
@@ -273,7 +246,6 @@
 
         <div class="question">
             <h3>24. What drives Russia’s actions, such as the invasion of Ukraine?</h3>
-            <input type="hidden" name="q24_full" id="q24_full">
             <label><input type="radio" name="q24" value="a"> Imperial ambitions and authoritarian paranoia</label>
             <label><input type="radio" name="q24" value="b"> NATO expansion perceived as a threat</label>
             <label><input type="radio" name="q24" value="c"> Historical Russian-Ukrainian entanglements</label>
@@ -282,8 +254,7 @@
         </div>
 
         <div class="question">
-            <h3>25. How should the West support Ukraine? (Choose all that apply)</h3>
-            <input type="hidden" name="q25_full" id="q25_full">
+            <h3>25. How should the West support Ukraine? (Choose up to 3)</h3>
             <div class="checkbox-group" data-max="3">
                 <label><input type="checkbox" name="q25[]" value="a"> Military assistance</label>
                 <label><input type="checkbox" name="q25[]" value="b"> Economic aid and reconstruction</label>
@@ -296,7 +267,6 @@
 
         <div class="question">
             <h3>26. Should Ukraine be allowed to join NATO and/or the EU?</h3>
-            <input type="hidden" name="q26_full" id="q26_full">
             <label><input type="radio" name="q26" value="a"> Yes—both</label>
             <label><input type="radio" name="q26" value="b"> Yes to the EU, but NATO membership is too risky</label>
             <label><input type="radio" name="q26" value="c"> No—either would provoke further conflict</label>
@@ -305,7 +275,6 @@
 
         <div class="question">
             <h3>27. What is your position on negotiating with authoritarian leaders like Vladimir Putin?</h3>
-            <input type="hidden" name="q27_full" id="q27_full">
             <label><input type="radio" name="q27" value="a"> No negotiations—they cannot be trusted</label>
             <label><input type="radio" name="q27" value="b"> Only from a position of strength</label>
             <label><input type="radio" name="q27" value="c"> Yes, diplomacy must always remain open</label>
@@ -314,7 +283,6 @@
 
         <div class="question">
             <h3>28. How should war crimes committed in Ukraine be addressed?</h3>
-            <input type="hidden" name="q28_full" id="q28_full">
             <label><input type="radio" name="q28" value="a"> Through international tribunals and legal accountability</label>
             <label><input type="radio" name="q28" value="b"> By supporting Ukrainian-led justice mechanisms</label>
             <label><input type="radio" name="q28" value="c"> Via long-term reconciliation efforts after the war</label>
@@ -323,7 +291,6 @@
 
         <div class="question">
             <h3>29. What long-term future do you envision for Russia?</h3>
-            <input type="hidden" name="q29_full" id="q29_full">
             <label><input type="radio" name="q29" value="a"> Democratic reform through internal resistance</label>
             <label><input type="radio" name="q29" value="b"> Breakup or decentralization into regional entities</label>
             <label><input type="radio" name="q29" value="c"> Continued authoritarianism</label>
@@ -333,7 +300,6 @@
 
         <div class="question">
             <h3>30. What should be the West’s long-term strategy toward Russia?</h3>
-            <input type="hidden" name="q30_full" id="q30_full">
             <label><input type="radio" name="q30" value="a"> Containment and deterrence</label>
             <label><input type="radio" name="q30" value="b"> Engagement with Russian civil society and opposition</label>
             <label><input type="radio" name="q30" value="c"> Economic isolation</label>
@@ -346,7 +312,6 @@
 
         <div class="question">
             <h3>31. What best describes your view of the U.S. role in global affairs?</h3>
-            <input type="hidden" name="q31_full" id="q31_full">
             <label><input type="radio" name="q31" value="a"> A force for good, promoting democracy and human rights</label>
             <label><input type="radio" name="q31" value="b"> A necessary leader in maintaining global stability</label>
             <label><input type="radio" name="q31" value="c"> A country that should focus on domestic issues first</label>
@@ -356,7 +321,6 @@
 
         <div class="question">
             <h3>32. Which U.S. foreign policy approach do you most support?</h3>
-            <input type="hidden" name="q32_full" id="q32_full">
             <label><input type="radio" name="q32" value="a"> Liberal internationalism (multilateralism, alliances, diplomacy)</label>
             <label><input type="radio" name="q32" value="b"> Realism (strategic interests, balanced intervention)</label>
             <label><input type="radio" name="q32" value="c"> Neoconservatism (promoting democracy, even via force)</label>
@@ -365,7 +329,6 @@
 
         <div class="question">
             <h3>33. How do you view American exceptionalism?</h3>
-            <input type="hidden" name="q33_full" id="q33_full">
             <label><input type="radio" name="q33" value="a"> A noble idea rooted in freedom and opportunity</label>
             <label><input type="radio" name="q33" value="b"> An outdated myth masking inequality and imperialism</label>
             <label><input type="radio" name="q33" value="c"> A useful narrative for national cohesion, if tempered by humility</label>
@@ -374,7 +337,6 @@
 
         <div class="question">
             <h3>34. What is your view on the U.S. political system and its two-party structure?</h3>
-            <input type="hidden" name="q34_full" id="q34_full">
             <label><input type="radio" name="q34" value="a"> Still effective, but needs reform</label>
             <label><input type="radio" name="q34" value="b"> Dysfunctional and polarized</label>
             <label><input type="radio" name="q34" value="c"> Captured by elites and corporations</label>
@@ -383,7 +345,6 @@
 
         <div class="question">
             <h3>35. Which domestic policy area should the U.S. government prioritize?</h3>
-            <input type="hidden" name="q35_full" id="q35_full">
             <label><input type="radio" name="q35" value="a"> Healthcare reform (e.g., universal coverage, cost reduction)</label>
             <label><input type="radio" name="q35" value="b"> Education reform (e.g., affordability, curriculum changes)</label>
             <label><input type="radio" name="q35" value="c"> Criminal justice reform (e.g., policing, incarceration)</label>
@@ -393,7 +354,6 @@
 
         <div class="question">
             <h3>36. What values are most important for your choice in a U.S. presidential election? (Choose up to 3)</h3>
-            <input type="hidden" name="q36_full" id="q36_full">
             <div class="checkbox-group" data-max="3">
                 <label><input type="checkbox" name="q36[]" value="a"> Integrity and honesty</label>
                 <label><input type="checkbox" name="q36[]" value="b"> Competence and experience</label>
@@ -408,7 +368,6 @@
 
         <div class="question">
             <h3>37. What is your stance on America’s global military presence?</h3>
-            <input type="hidden" name="q37_full" id="q37_full">
             <label><input type="radio" name="q37" value="a"> It’s necessary to protect allies and global order</label>
             <label><input type="radio" name="q37" value="b"> It should be reduced but not eliminated</label>
             <label><input type="radio" name="q37" value="c"> It’s outdated and wasteful</label>
@@ -417,7 +376,6 @@
 
         <div class="question">
             <h3>38. Should the U.S. deepen its involvement in European affairs (e.g., NATO, EU partnerships)?</h3>
-            <input type="hidden" name="q38_full" id="q38_full">
             <label><input type="radio" name="q38" value="a"> Yes, through stronger military and diplomatic commitments</label>
             <label><input type="radio" name="q38" value="b"> Yes, but only through diplomacy and economic support</label>
             <label><input type="radio" name="q38" value="c"> No, the U.S. should focus on domestic or other global priorities</label>
@@ -427,7 +385,6 @@
 
         <div class="question">
             <h3>39. Should the U.S. fund international broadcasters like RFE/RL and VOA to promote democracy?</h3>
-            <input type="hidden" name="q39_full" id="q39_full">
             <label><input type="radio" name="q39" value="a"> Yes, they are critical tools for countering authoritarian propaganda</label>
             <label><input type="radio" name="q39" value="b"> Yes, but funding should be limited and scrutinized for bias</label>
             <label><input type="radio" name="q39" value="c"> No, they are ineffective or overly interventionist</label>
@@ -440,7 +397,6 @@
 
         <div class="question">
             <h3>40. How do you view cultural trends like political correctness and identity politics?</h3>
-            <input type="hidden" name="q40_full" id="q40_full">
             <label><input type="radio" name="q40" value="a"> A sincere effort toward justice and inclusion</label>
             <label><input type="radio" name="q40" value="b"> A form of censorship and conformity</label>
             <label><input type="radio" name="q40" value="c"> Divisive and counterproductive</label>
@@ -450,7 +406,6 @@
 
         <div class="question">
             <h3>41. How should society approach controversial historical figures?</h3>
-            <input type="hidden" name="q41_full" id="q41_full">
             <label><input type="radio" name="q41" value="a"> Contextualize them—don’t erase them</label>
             <label><input type="radio" name="q41" value="b"> Remove honors but preserve them for study</label>
             <label><input type="radio" name="q41" value="c"> Maintain statues and names for heritage’s sake</label>
@@ -459,7 +414,6 @@
 
         <div class="question">
             <h3>42. How would you respond to accusations of insensitivity in a public cultural debate?</h3>
-            <input type="hidden" name="q42_full" id="q42_full">
             <label><input type="radio" name="q42" value="a"> Stand firm, emphasizing the importance of open dialogue</label>
             <label><input type="radio" name="q42" value="b"> Acknowledge concerns but defend your position with evidence</label>
             <label><input type="radio" name="q42" value="c"> Apologize and seek to understand the opposing view</label>
@@ -469,7 +423,6 @@
 
         <div class="question">
             <h3>43. What should be the role of comedy in society?</h3>
-            <input type="hidden" name="q43_full" id="q43_full">
             <label><input type="radio" name="q43" value="a"> Push boundaries and speak uncomfortable truths</label>
             <label><input type="radio" name="q43" value="b"> Entertain without perpetuating harmful stereotypes</label>
             <label><input type="radio" name="q43" value="c"> Reflect social tensions through humor</label>
@@ -478,7 +431,6 @@
 
         <div class="question">
             <h3>44. What best describes your general stance on cultural change?</h3>
-            <input type="hidden" name="q44_full" id="q44_full">
             <label><input type="radio" name="q44" value="a"> Change is inevitable and should be embraced</label>
             <label><input type="radio" name="q44" value="b"> We must preserve traditions while adapting</label>
             <label><input type="radio" name="q44" value="c"> Culture is being reshaped too quickly and politically</label>
@@ -487,7 +439,6 @@
 
         <div class="question">
             <h3>45. What is your view on the role of women in modern society?</h3>
-            <input type="hidden" name="q45_full" id="q45_full">
             <label><input type="radio" name="q45" value="a"> Women should have equal opportunities in all spheres, with no restrictions.</label>
             <label><input type="radio" name="q45" value="b"> Women’s roles should balance equality with traditional family responsibilities.</label>
             <label><input type="radio" name="q45" value="c"> Women’s advancement should prioritize merit over affirmative policies.</label>
@@ -497,7 +448,6 @@
 
         <div class="question">
             <h3>46. How do you view feminism in the 21st century?</h3>
-            <input type="hidden" name="q46_full" id="q46_full">
             <label><input type="radio" name="q46" value="a"> Essential for achieving gender equality and addressing systemic inequities.</label>
             <label><input type="radio" name="q46" value="b"> Often overreaches, promoting division rather than unity.</label>
             <label><input type="radio" name="q46" value="c"> A mix—valuable in some contexts but problematic when dogmatic.</label>
@@ -507,7 +457,6 @@
 
         <div class="question">
             <h3>47. Should gender equality policies (e.g., quotas, affirmative action) be implemented in workplaces?</h3>
-            <input type="hidden" name="q47_full" id="q47_full">
             <label><input type="radio" name="q47" value="a"> Yes, they are necessary to correct historical imbalances.</label>
             <label><input type="radio" name="q47" value="b"> Yes, but only temporarily and with clear criteria.</label>
             <label><input type="radio" name="q47" value="c"> No, they risk undermining merit and fairness.</label>
@@ -517,7 +466,6 @@
 
         <div class="question">
             <h3>48. What is your stance on the traditional family structure?</h3>
-            <input type="hidden" name="q48_full" id="q48_full">
             <label><input type="radio" name="q48" value="a"> It’s a valuable foundation for society and should be preserved.</label>
             <label><input type="radio" name="q48" value="b"> It’s one of many valid family models—diversity should be embraced.</label>
             <label><input type="radio" name="q48" value="c"> It’s outdated and restrictive in modern contexts.</label>
@@ -527,7 +475,6 @@
 
         <div class="question">
             <h3>49. What is your view on legal protections for gay and lesbian individuals (e.g., marriage, anti-discrimination laws)?</h3>
-            <input type="hidden" name="q49_full" id="q49_full">
             <label><input type="radio" name="q49" value="a"> Full legal protections are essential for equality.</label>
             <label><input type="radio" name="q49" value="b"> Protections are important but should balance religious freedoms.</label>
             <label><input type="radio" name="q49" value="c"> Limited protections—personal freedoms should guide social interactions.</label>
@@ -537,7 +484,6 @@
 
         <div class="question">
             <h3>50. Should transgender individuals have the right to use facilities (e.g., restrooms) matching their gender identity?</h3>
-            <input type="hidden" name="q50_full" id="q50_full">
             <label><input type="radio" name="q50" value="a"> Yes, it’s a fundamental right tied to personal identity.</label>
             <label><input type="radio" name="q50" value="b"> Yes, but with accommodations for privacy or safety concerns.</label>
             <label><input type="radio" name="q50" value="c"> No, facilities should be based on biological sex for fairness.</label>
@@ -547,7 +493,6 @@
 
         <div class="question">
             <h3>51. How should schools address issues of gender identity and sexual orientation in education?</h3>
-            <input type="hidden" name="q51_full" id="q51_full">
             <label><input type="radio" name="q51" value="a"> Include comprehensive education on diversity and inclusion.</label>
             <label><input type="radio" name="q51" value="b"> Teach basic respect but avoid ideological frameworks.</label>
             <label><input type="radio" name="q51" value="c"> Focus on academics, leaving such topics to families.</label>
@@ -557,7 +502,6 @@
 
         <div class="question">
             <h3>52. What is your view on the societal acceptance of gay and transgender identities?</h3>
-            <input type="hidden" name="q52_full" id="q52_full">
             <label><input type="radio" name="q52" value="a"> Full acceptance is crucial for a just society.</label>
             <label><input type="radio" name="q52" value="b"> Acceptance should be encouraged but not mandated.</label>
             <label><input type="radio" name="q52" value="c"> Society should remain neutral, respecting individual choices.</label>
@@ -567,7 +511,6 @@
 
         <div class="question">
             <h3>53. How would you respond to criticism that your views on gender or family issues are discriminatory?</h3>
-            <input type="hidden" name="q53_full" id="q53_full">
             <label><input type="radio" name="q53" value="a"> Defend my position as grounded in reason and fairness.</label>
             <label><input type="radio" name="q53" value="b"> Acknowledge concerns and clarify my intent to respect all individuals.</label>
             <label><input type="radio" name="q53" value="c"> Engage in dialogue to understand the criticism’s basis.</label>
@@ -577,7 +520,6 @@
 
         <div class="question">
             <h3>54. What is your stance on immigration levels in your country?</h3>
-            <input type="hidden" name="q54_full" id="q54_full">
             <label><input type="radio" name="q54" value="a"> Increase immigration to meet economic and humanitarian needs.</label>
             <label><input type="radio" name="q54" value="b"> Maintain current levels with stricter enforcement.</label>
             <label><input type="radio" name="q54" value="c"> Reduce immigration to prioritize national resources and security.</label>
@@ -587,7 +529,6 @@
 
         <div class="question">
             <h3>55. How should society treat immigrants seeking to integrate?</h3>
-            <input type="hidden" name="q55_full" id="q55_full">
             <label><input type="radio" name="q55" value="a"> Fully embrace them with equal rights and opportunities.</label>
             <label><input type="radio" name="q55" value="b"> Support integration but expect adherence to national laws and values.</label>
             <label><input type="radio" name="q55" value="c"> Limit support to preserve cultural and economic stability.</label>
@@ -597,7 +538,6 @@
 
         <div class="question">
             <h3>56. What is your view on illegal immigration?</h3>
-            <input type="hidden" name="q56_full" id="q56_full">
             <label><input type="radio" name="q56" value="a"> Provide pathways to legal status for humanitarian reasons.</label>
             <label><input type="radio" name="q56" value="b"> Enforce strict deportation to uphold the rule of law.</label>
             <label><input type="radio" name="q56" value="c"> Balance enforcement with case-by-case legalization.</label>
@@ -607,7 +547,6 @@
 
         <div class="question">
             <h3>57. How important is it for immigrants to adopt the host country’s culture?</h3>
-            <input type="hidden" name="q57_full" id="q57_full">
             <label><input type="radio" name="q57" value="a"> Essential for social cohesion and national identity.</label>
             <label><input type="radio" name="q57" value="b"> Important but should allow some cultural retention.</label>
             <label><input type="radio" name="q57" value="c"> Not necessary—cultural diversity strengthens society.</label>
@@ -617,7 +556,6 @@
 
         <div class="question">
             <h3>58. Should society accept customs from other cultures that conflict with local norms?</h3>
-            <input type="hidden" name="q58_full" id="q58_full">
             <label><input type="radio" name="q58" value="a"> Yes, to promote inclusivity and diversity.</label>
             <label><input type="radio" name="q58" value="b"> Only if they align with fundamental local values (e.g., human rights).</label>
             <label><input type="radio" name="q58" value="c"> No, local norms should take precedence.</label>
@@ -627,7 +565,6 @@
 
         <div class="question">
             <h3>59. How would you respond to criticism that your immigration views are xenophobic?</h3>
-            <input type="hidden" name="q59_full" id="q59_full">
             <label><input type="radio" name="q59" value="a"> Defend my position as based on reason and national interest.</label>
             <label><input type="radio" name="q59" value="b"> Acknowledge concerns and clarify my support for fair immigration.</label>
             <label><input type="radio" name="q59" value="c"> Engage in dialogue to understand the criticism’s basis.</label>
@@ -640,7 +577,6 @@
 
         <div class="question">
             <h3>60. How would you describe your own worldview?</h3>
-            <input type="hidden" name="q60_full" id="q60_full">
             <label><input type="radio" name="q60" value="a"> Religious or faith-based</label>
             <label><input type="radio" name="q60" value="b"> Spiritual but not religious</label>
             <label><input type="radio" name="q60" value="c"> Agnostic—unsure or undecided</label>
@@ -651,7 +587,6 @@
 
         <div class="question">
             <h3>61. What role should religion play in public life and governance?</h3>
-            <input type="hidden" name="q61_full" id="q61_full">
             <label><input type="radio" name="q61" value="a"> Moral inspiration, but separate from government</label>
             <label><input type="radio" name="q61" value="b"> A guiding force in national identity and law</label>
             <label><input type="radio" name="q61" value="c"> Religion should be entirely private</label>
@@ -660,7 +595,6 @@
 
         <div class="question">
             <h3>62. Where do you believe morality ultimately comes from, and how do you view moral relativism?</h3>
-            <input type="hidden" name="q62_full" id="q62_full">
             <label><input type="radio" name="q62" value="a"> Divine authority—some values are universal</label>
             <label><input type="radio" name="q62" value="b"> Human reason—relativism is true but needs shared standards</label>
             <label><input type="radio" name="q62" value="c"> Evolution and social contracts—relativism explains cultural differences</label>
@@ -669,7 +603,6 @@
 
         <div class="question">
             <h3>63. How do you relate to religious traditions in your family or community?</h3>
-            <input type="hidden" name="q63_full" id="q63_full">
             <label><input type="radio" name="q63" value="a"> Deeply rooted and actively practiced</label>
             <label><input type="radio" name="q63" value="b"> Respected but not central to my life</label>
             <label><input type="radio" name="q63" value="c"> Maintained for cultural reasons</label>
@@ -678,7 +611,6 @@
 
         <div class="question">
             <h3>64. What is your view on the value of religious texts?</h3>
-            <input type="hidden" name="q64_full" id="q64_full">
             <label><input type="radio" name="q64" value="a"> Sacred and divinely inspired</label>
             <label><input type="radio" name="q64" value="b"> Important historical and moral documents</label>
             <label><input type="radio" name="q64" value="c"> Culturally significant but flawed</label>
@@ -688,7 +620,6 @@
 
         <div class="question">
             <h3>65. In moments of crisis or moral conflict, what do you most rely on?</h3>
-            <input type="hidden" name="q65_full" id="q65_full">
             <label><input type="radio" name="q65" value="a"> Faith or religious teachings</label>
             <label><input type="radio" name="q65" value="b"> Reason, logic, and introspection</label>
             <label><input type="radio" name="q65" value="c"> Family, community, or tradition</label>
@@ -701,7 +632,6 @@
 
         <div class="question">
             <h3>66. Which philosophical tradition most influences your worldview?</h3>
-            <input type="hidden" name="q66_full" id="q66_full">
             <label><input type="radio" name="q66" value="a"> Classical liberalism (freedom, reason, individual rights)</label>
             <label><input type="radio" name="q66" value="b"> Existentialism (authenticity, freedom, responsibility)</label>
             <label><input type="radio" name="q66" value="c"> Pragmatism (truth as utility and practical outcomes)</label>
@@ -712,7 +642,6 @@
 
         <div class="question">
             <h3>67. How do you understand the concept of truth, and what is language’s role in shaping it?</h3>
-            <input type="hidden" name="q67_full" id="q67_full">
             <label><input type="radio" name="q67" value="a"> Objective and discoverable—language reflects reality</label>
             <label><input type="radio" name="q67" value="b"> Constructed through culture—language constructs reality</label>
             <label><input type="radio" name="q67" value="c"> Contextual—language limits what we can know</label>
@@ -721,7 +650,6 @@
 
         <div class="question">
             <h3>68. What is your philosophical attitude toward suffering?</h3>
-            <input type="hidden" name="q68_full" id="q68_full">
             <label><input type="radio" name="q68" value="a"> A necessary part of life that builds character</label>
             <label><input type="radio" name="q68" value="b"> A problem to be alleviated through empathy and action</label>
             <label><input type="radio" name="q68" value="c"> A meaningless fact of existence</label>
@@ -730,7 +658,6 @@
 
         <div class="question">
             <h3>69. What is the purpose of philosophy, in your view?</h3>
-            <input type="hidden" name="q69_full" id="q69_full">
             <label><input type="radio" name="q69" value="a"> To pursue truth and wisdom</label>
             <label><input type="radio" name="q69" value="b"> To clarify thinking and challenge assumptions</label>
             <label><input type="radio" name="q69" value="c"> To help us live better lives</label>
@@ -743,7 +670,6 @@
 
         <div class="question">
             <h3>70. What is your perspective on globalism, nationalism, and global governance?</h3>
-            <input type="hidden" name="q70_full" id="q70_full">
             <label><input type="radio" name="q70" value="a"> Globalism is vital for cooperation and peace</label>
             <label><input type="radio" name="q70" value="b"> Nationalism protects cultural and political integrity</label>
             <label><input type="radio" name="q70" value="c"> A balance of global cooperation and national sovereignty</label>
@@ -753,7 +679,6 @@
 
         <div class="question">
             <h3>71. Which international issues are most important to you?</h3>
-            <input type="hidden" name="q71_full" id="q71_full">
             <label><input type="radio" name="q71" value="a"> Human rights and democratic freedoms</label>
             <label><input type="radio" name="q71" value="b"> Climate change and environmental protection</label>
             <label><input type="radio" name="q71" value="c"> Economic development and poverty alleviation</label>
@@ -764,7 +689,6 @@
 
         <div class="question">
             <h3>72. What is your perspective on China’s growing global influence?</h3>
-            <input type="hidden" name="q72_full" id="q72_full">
             <label><input type="radio" name="q72" value="a"> A serious threat to democracy and human rights</label>
             <label><input type="radio" name="q72" value="b"> A strategic competitor requiring diplomatic engagement</label>
             <label><input type="radio" name="q72" value="c"> A partner in tackling global issues like climate change</label>
@@ -773,7 +697,6 @@
 
         <div class="question">
             <h3>73. How would you describe your general political ideology?</h3>
-            <input type="hidden" name="q73_full" id="q73_full">
             <label><input type="radio" name="q73" value="a"> Conservative (tradition, limited government)</label>
             <label><input type="radio" name="q73" value="b"> Liberal (progressive policies, social justice)</label>
             <label><input type="radio" name="q73" value="c"> Libertarian (individual freedom, minimal government)</label>
@@ -784,7 +707,6 @@
 
         <div class="question">
             <h3>74. How do you define “progressive” policies in today’s political climate?</h3>
-            <input type="hidden" name="q74_full" id="q74_full">
             <label><input type="radio" name="q74" value="a"> Policies promoting social justice and equity</label>
             <label><input type="radio" name="q74" value="b"> Policies reforming traditional structures for inclusion</label>
             <label><input type="radio" name="q74" value="c"> Economic and technological innovation for prosperity</label>
@@ -796,7 +718,6 @@
 
         <div class="question">
             <h3>75. How confident are you in defending your political views in a public setting?</h3>
-            <input type="hidden" name="q75_full" id="q75_full">
             <label><input type="radio" name="q75" value="a"> Very confident—I can articulate my views clearly</label>
             <label><input type="radio" name="q75" value="b"> Moderately confident—I may struggle with tough questions</label>
             <label><input type="radio" name="q75" value="c"> Somewhat confident—I need more practice</label>
@@ -806,7 +727,6 @@
 
         <div class="question">
             <h3>76. What is the strongest counterargument to your stance on free speech, and how would you address it?</h3>
-            <input type="hidden" name="q76_full" id="q76_full">
             <label><input type="radio" name="q76" value="a"> Free speech harms marginalized groups—I’d argue harm is subjective</label>
             <label><input type="radio" name="q76" value="b"> Free speech enables disinformation—I’d emphasize education</label>
             <label><input type="radio" name="q76" value="c"> Free speech can incite violence—I’d concede narrow limits</label>
@@ -816,7 +736,6 @@
 
         <div class="question">
             <h3>77. How do you handle disagreements with colleagues who hold opposing political views?</h3>
-            <input type="hidden" name="q77_full" id="q77_full">
             <label><input type="radio" name="q77" value="a"> Engage in respectful debate to find common ground</label>
             <label><input type="radio" name="q77" value="b"> Listen but firmly defend my position</label>
             <label><input type="radio" name="q77" value="c"> Avoid political discussions to maintain harmony</label>
@@ -826,7 +745,6 @@
 
         <div class="question">
             <h3>78. Which of your political views are you least confident defending, and why?</h3>
-            <input type="hidden" name="q78_full" id="q78_full">
             <label><input type="radio" name="q78" value="a"> Cultural issues—they’re nuanced and easily misunderstood</label>
             <label><input type="radio" name="q78" value="b"> Foreign policy—they depend on complex dynamics</label>
             <label><input type="radio" name="q78" value="c"> Domestic policy—I’m less informed on specifics</label>
@@ -837,12 +755,6 @@
         <!-- Submit Button -->
         <button type="submit" class="submit-button">Submit</button>
     </form>
-
-    <!-- Summary Section -->
-    <div id="summary">
-        <h2>Your Answers</h2>
-        <div id="summary-content"></div>
-    </div>
 
     <script>
         // Enforce checkbox limit (up to 3 selections)
@@ -861,14 +773,13 @@
             });
         });
 
-        // Handle form submission and display summary
+        // Handle form submission and redirect to answers page
         document.getElementById('questionnaire').addEventListener('submit', function(e) {
+            e.preventDefault();
             const form = this;
-            const summaryContent = document.getElementById('summary-content');
-            const summary = document.getElementById('summary');
-            summaryContent.innerHTML = '';
+            const answers = [];
 
-            // Map of question numbers to their text for display and submission
+            // Map of question numbers to their text
             const questionTexts = {
                 q1: "What is your view on the role of government in people’s lives?",
                 q2: "What is your view on the role of government in economic affairs?",
@@ -894,7 +805,7 @@
                 q22: "How would you handle a colleague’s offensive speech in a professional setting?",
                 q23: "Do you believe the line between journalism and activism is blurring?",
                 q24: "What drives Russia’s actions, such as the invasion of Ukraine?",
-                q25: "How should the West support Ukraine? (Choose all that apply)",
+                q25: "How should the West support Ukraine? (Choose up to 3)",
                 q26: "Should Ukraine be allowed to join NATO and/or the EU?",
                 q27: "What is your position on negotiating with authoritarian leaders like Vladimir Putin?",
                 q28: "How should war crimes committed in Ukraine be addressed?",
@@ -950,59 +861,42 @@
                 q78: "Which of your political views are you least confident defending, and why?"
             };
 
-            // Collect answers for local summary and Formspree submission
+            // Collect answers and redirect to answers.html
             const formData = new FormData(form);
+            const urlParams = new URLSearchParams();
             for (let i = 1; i <= 78; i++) {
                 const questionKey = `q${i}`;
-                const questionText = questionTexts[questionKey];
                 let answer = '';
                 const radios = form.querySelectorAll(`input[name="${questionKey}"]:checked`);
                 const checkboxes = form.querySelectorAll(`input[name="${questionKey}[]"]:checked`);
                 const otherInput = form.querySelector(`input[name="${questionKey}_other"]`);
-                const hiddenInput = form.querySelector(`#${questionKey}_full`);
 
                 if (radios.length > 0) {
                     const value = radios[0].value;
                     answer = form.querySelector(`input[name="${questionKey}"][value="${value}"]`).parentElement.textContent.trim();
                     if (value === 'e' && otherInput && otherInput.value) {
                         answer = otherInput.value;
+                        urlParams.set(`${questionKey}_other`, encodeURIComponent(otherInput.value));
                     }
+                    urlParams.set(questionKey, value);
                 } else if (checkboxes.length > 0) {
+                    const values = Array.from(checkboxes).map(cb => cb.value);
                     answer = Array.from(checkboxes).map(cb => form.querySelector(`input[name="${questionKey}[]"][value="${cb.value}"]`).parentElement.textContent.trim()).join(', ');
+                    urlParams.set(questionKey, values.join(','));
                 } else if (otherInput && otherInput.value) {
                     answer = otherInput.value;
+                    urlParams.set(`${questionKey}_other`, encodeURIComponent(otherInput.value));
                 } else {
                     answer = 'Not answered';
+                    urlParams.set(questionKey, '');
                 }
 
-                // Set hidden input for full question and answer text
-                if (hiddenInput) {
-                    hiddenInput.value = `${questionText}: ${answer}`;
-                }
-
-                // Add to local summary
-                summaryContent.innerHTML += `<p><strong>${i}. ${questionText}</strong><br>${answer}</p>`;
+                // Store full question and answer text
+                urlParams.set(`q${i}_full`, encodeURIComponent(`${questionTexts[questionKey]}: ${answer}`));
             }
 
-            summary.style.display = 'block';
-            summary.scrollIntoView({ behavior: 'smooth' });
-
-            // Allow Formspree submission to proceed
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    console.log('Form submitted to Formspree successfully');
-                } else {
-                    console.error('Formspree submission failed');
-                }
-            }).catch(error => {
-                console.error('Error submitting to Formspree:', error);
-            });
+            // Redirect to answers.html with URL parameters
+            window.location.href = `answers.html?${urlParams.toString()}`;
         });
     </script>
 </body>
