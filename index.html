@@ -42,6 +42,29 @@ input[type="radio"], input[type="checkbox"] {
 }
     </style>
 </head>
+    <div class="progress-bar">
+    <div id="progress" style="width: 0%;"></div>
+</div>
+<style>
+    .progress-bar {
+        height: 10px;
+        background: #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    #progress {
+        height: 100%;
+        background: #007bff;
+        transition: width 0.3s;
+    }
+</style>
+<script>
+    document.getElementById('questionnaire').addEventListener('change', () => {
+        const inputs = document.querySelectorAll('input:checked').length;
+        const total = 78; // Adjust based on required questions
+        document.getElementById('progress').style.width = `${(inputs / total) * 100}%`;
+    });
+</script>
 <body>
     <h1>Political Views Questionnaire</h1>
     <form id="questionnaire">
