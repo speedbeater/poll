@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Questionnaire Answers</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        #answers { margin-top: 20px; padding: 15px; border: 1px solid #ccc; }
+        #answers p { margin: 10px 0; }
+        .question-text { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Your Questionnaire Answers</h1>
+    <div id="answers"></div>
+
+    <script>
+        // Map of question numbers to their text
+        const questionTexts = {
+            q1: "What is your view on the role of government in people’s lives?",
+            q2: "What is your view on the role of government in economic affairs?",
+            q3: "Do you believe political labels are still useful?",
+            q4: "Do you identify primarily as:",
+            q5: "What personal experience most shaped your political views?",
+            q6: "Which virtues do you value most in political leadership? (Choose up to 3)",
+            q7: "Which philosophical outlook most aligns with your views?",
+            q8: "Which issue do you believe is the most urgent today?",
+            q9: "What is essential to a functioning democracy? (Choose up to 3)",
+            q10: "Is democracy always the best system of government?",
+            q11: "What is the greatest threat to democracy, and how should it be addressed?",
+            q12: "Should governments or institutions intervene to defend democracy globally, and how?",
+            q13: "Is it ever justifiable to restrict democratic freedoms for national security?",
+            q14: "Can authoritarian regimes ever provide effective governance?",
+            q15: "What electoral reform would you most support to strengthen democracy?",
+            q16: "What do you think about the current state of democracy around the world?",
+            q17: "What is the primary role of journalism in society?",
+            q18: "Should freedom of speech include the right to offend, and to what extent?",
+            q19: "How should journalists handle misinformation or disinformation?",
+            q20: "What is your view on anonymous sources in journalism?",
+            q21: "Do you believe governments should regulate social media platforms?",
+            q22: "How would you handle a colleague’s offensive speech in a professional setting?",
+            q23: "Do you believe the line between journalism and activism is blurring?",
+            q24: "What drives Russia’s actions, such as the invasion of Ukraine?",
+            q25: "How should the West support Ukraine? (Choose up to 3)",
+            q26: "Should Ukraine be allowed to join NATO and/or the EU?",
+            q27: "What is your position on negotiating with authoritarian leaders like Vladimir Putin?",
+            q28: "How should war crimes committed in Ukraine be addressed?",
+            q29: "What long-term future do you envision for Russia?",
+            q30: "What should be the West’s long-term strategy toward Russia?",
+            q31: "What best describes your view of the U.S. role in global affairs?",
+            q32: "Which U.S. foreign policy approach do you most support?",
+            q33: "How do you view American exceptionalism?",
+            q34: "What is your view on the U.S. political system and its two-party structure?",
+            q35: "Which domestic policy area should the U.S. government prioritize?",
+            q36: "What values are most important for your choice in a U.S. presidential election? (Choose up to 3)",
+            q37: "What is your stance on America’s global military presence?",
+            q38: "Should the U.S. deepen its involvement in European affairs (e.g., NATO, EU partnerships)?",
+            q39: "Should the U.S. fund international broadcasters like RFE/RL and VOA to promote democracy?",
+            q40: "How do you view cultural trends like political correctness and identity politics?",
+            q41: "How should society approach controversial historical figures?",
+            q42: "How would you respond to accusations of insensitivity in a public cultural debate?",
+            q43: "What should be the role of comedy in society?",
+            q44: "What best describes your general stance on cultural change?",
+            q45: "What is your view on the role of women in modern society?",
+            q46: "How do you view feminism in the 21st century?",
+            q47: "Should gender equality policies (e.g., quotas, affirmative action) be implemented in workplaces?",
+            q48: "What is your stance on the traditional family structure?",
+            q49: "What is your view on legal protections for gay and lesbian individuals (e.g., marriage, anti-discrimination laws)?",
+            q50: "Should transgender individuals have the right to use facilities (e.g., restrooms) matching their gender identity?",
+            q51: "How should schools address issues of gender identity and sexual orientation in education?",
+            q52: "What is your view on the societal acceptance of gay and transgender identities?",
+            q53: "How would you respond to criticism that your views on gender or family issues are discriminatory?",
+            q54: "What is your stance on immigration levels in your country?",
+            q55: "How should society treat immigrants seeking to integrate?",
+            q56: "What is your view on illegal immigration?",
+            q57: "How important is it for immigrants to adopt the host country’s culture?",
+            q58: "Should society accept customs from other cultures that conflict with local norms?",
+            q59: "How would you respond to criticism that your immigration views are xenophobic?",
+            q60: "How would you describe your own worldview?",
+            q61: "What role should religion play in public life and governance?",
+            q62: "Where do you believe morality ultimately comes from, and how do you view moral relativism?",
+            q63: "How do you relate to religious traditions in your family or community?",
+            q64: "What is your view on the value of religious texts?",
+            q65: "In moments of crisis or moral conflict, what do you most rely on?",
+            q66: "Which philosophical tradition most influences your worldview?",
+            q67: "How do you understand the concept of truth, and what is language’s role in shaping it?",
+            q68: "What is your philosophical attitude toward suffering?",
+            q69: "What is the purpose of philosophy, in your view?",
+            q70: "What is your perspective on globalism, nationalism, and global governance?",
+            q71: "Which international issues are most important to you?",
+            q72: "What is your perspective on China’s growing global influence?",
+            q73: "How would you describe your general political ideology?",
+            q74: "How do you define 'progressive' policies in today’s political climate?",
+            q75: "How confident are you in defending your political views in a public setting?",
+            q76: "What is the strongest counterargument to your stance on free speech, and how would you address it?",
+            q77: "How do you handle disagreements with colleagues who hold opposing political views?",
+            q78: "Which of your political views are you least confident defending, and why?"
+        };
+
+        // Parse URL parameters and display answers
+        const urlParams = new URLSearchParams(window.location.search);
+        const answersDiv = document.getElementById('answers');
+        let answersHtml = '';
+
+        for (let i = 1; i <= 78; i++) {
+            const questionKey = `q${i}`;
+            const fullAnswer = urlParams.get(`q${i}_full`) ? decodeURIComponent(urlParams.get(`q${i}_full`)) : 'Not answered';
+            answersHtml += `<p><span class="question-text">${i}. ${questionTexts[questionKey]}</span><br>${fullAnswer.split(': ')[1]}</p>`;
+        }
+
+        answersDiv.innerHTML = answersHtml;
+    </script>
+</body>
+</html>
